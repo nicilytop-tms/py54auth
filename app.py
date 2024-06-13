@@ -6,12 +6,16 @@ class App:
     MENU = {
         "login": AuthSystem.auth,
         "register": RegistrationSystem.sign_up,
+        "exit": None,
     }
 
     def run(self):
-        command = input("Your choice please (login | register)")
-        do = self.MENU[command]
-        do()
+        command = input("Your choice please (login | register | exit)")
+        try:
+            do = self.MENU[command]
+            do()
+        except KeyError:
+            print("Unknown command try again next time")
 
 
 app = App()
