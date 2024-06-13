@@ -1,2 +1,2 @@
-# py54auth
-This is system for auth and registration users
+# Authentication system
+### This is system for auth and registration users
